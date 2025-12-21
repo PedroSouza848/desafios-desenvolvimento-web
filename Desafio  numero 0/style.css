@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: white;
+}
+
+div.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #D6E1F0;
+    margin: auto;
+    
+    position: relative;
+}
+
+div.conteudo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px;
+    height: 400px;
+    width: 280px;
+    text-align: center;
+    background-color: white;
+}
+
+.imagem {
+    width: 280px;
+    height: 280px;
+}
+
+.texto {
+    font-family: sans-serif;
+}
