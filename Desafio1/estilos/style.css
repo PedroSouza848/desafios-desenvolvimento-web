@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'YoungSerif';
+    src: url('../recipe-page-main/assets/fonts/young-serif/YoungSerif-Regular.ttf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../recipe-page-main/assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('opentype');
+    font-weight: normal;
+}
+
+/*  Como o site é simples, não haverá uma versão mobile first e outra de media query separadas. Somente um CSS é o suficiente para o projeto */
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+body {
+    background-color: #F3E5D8;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+main {
+    width: 100%;
+    max-width: 650px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 20px;
+    
+}
+
+main > img {
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main > h1 {
+    font-family: 'YoungSerif', serif;
+    color: #312e2c;
+    font-size: 2.5em;
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+main > p {
+    color: #5f564d;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+main > div.preparo {
+    background-color: #FFF7FC; 
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+main > div.preparo > h2 {
+    color: #7a284e;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+main > div.preparo > ul {
+    margin-bottom: 10px;
+    padding-left: 10px; 
+    color: #5f564d;
+    list-style-position: inside;
+}
+
+main > h2 {
+    font-family: 'YoungSerif', serif;
+    color: #854632; 
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+ul, ol {
+    padding-left: 20px; 
+    color: #5f564d;
+    line-height: 1.6;
+}
+
+li {
+    margin-bottom: 10px; 
+    padding-left: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e9e9e9;
+    margin: 30px 0;
+}
+
