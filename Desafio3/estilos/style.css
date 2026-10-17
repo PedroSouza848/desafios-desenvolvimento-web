@@ -1,6 +1,34 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*Váriaveis para cores:
+--fundo
+--fundo-card
+--texto-principal
+--texto-secundario
+--cor-destaque
+--destaque-hover
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --fundo: #f8fafc;
+    --fundo-card:#ffffff;
+    --texto-principal: #0f172a;
+    --texto-secundario: #475569;
+    --cor-destaque: #2563eb;
+    --destaque-hover: #1d4ed8;
+}
+
+
+
 body{
-    background-color: rgb(56, 55, 55);
+    background-color: var(--fundo);
     
 }
