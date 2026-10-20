@@ -30,21 +30,22 @@ body{
     background-color: var(--fundo);
     color: var(--texto-principal);
     line-height: 1.5em;
-    width: 98vw;
+    
     height: 100vh;
     font-family: 'Inter', sans-serif;
 }
 
 header{
-    width: 99vw;
+    
     background-color: var(--cor-destaque);
     color: var(--texto-principal);
     display: flex;
     justify-content: flex-end;
     align-content: center;
     padding: 05px 15px;
-    position: sticky;
+    position: fixed;    /* ARRUMAR A ROLAGEM DO MENU */
     top: 0;
+    left: 0;
     z-index: 1;
 }
 
@@ -69,8 +70,8 @@ nav#menu a:hover{
 
 main{
     display: grid;
-    grid-template-columns: auto 90% auto;
-    
+    grid-template-columns: 300px 1fr;
+    align-items: start;
 }
 
 section#ficha img{
@@ -88,6 +89,9 @@ section#ficha img{
 
 section#ficha {
     background-color: var(--fundo-card);
+    position: sticky;
+    top: 20px;
+    height: fit-content; /* Faz com que a altura da ficha seja apenas o conteúdo dela */
     grid-column: 1;
     margin: 15px;
     padding: 20px;
@@ -164,7 +168,6 @@ section#projetos > article{
 section#projetos > article > h2{
     color: var(--cor-destaque);
     margin-bottom: 10px;
-
 }
 
 section#projetos > article > div#projetos-container{
@@ -202,3 +205,50 @@ section#contatos {
     grid-column: 2;
 }
 
+section#contatos{
+    background-color: var(--fundo-card);
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+}
+
+#contatos > article > h2{
+    color: var(--cor-destaque);
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+#contatos > article > div.contatos-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+}
+
+#contatos > article > div.contatos-container > a.contatos{
+    text-decoration: none;
+    background-color: var(--fundo);
+    border-radius: 8px;
+    padding: 15px;
+    color: var(--texto-principal);
+}
+
+#contatos > article > div.contatos-container > a.contatos > div > h3{
+    color: var(--cor-destaque);
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+footer{
+    background-color: var(--cor-destaque);
+    color: var(--fundo-card);
+    text-align: center;
+    padding: 2px;
+}
+
+footer > p > strong > a{
+    text-decoration: none;
+    color: var(--fundo-card);
+}
