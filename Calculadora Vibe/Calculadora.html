@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Windows</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="calculator-container">
+    <!-- Barra superior -->
+    <div class="title-bar">
+      <div class="title-left">
+        <i class="fa-solid fa-calculator"></i>
+        <span>Calculadora</span>
+      </div>
+      <div class="title-controls">
+        <button>&minus;</button>
+        <button>&square;</button>
+        <button class="close-btn">&times;</button>
+      </div>
+    </div>
+
+    <!-- Menu e tipo -->
+    <div class="calc-header">
+      <div class="header-left">
+        <button class="icon-btn"><i class="fa-solid fa-bars"></i></button>
+        <span class="mode-title">Padrão</span>
+        <button class="icon-btn keep-top"><i class="fa-solid fa-clone"></i></button>
+      </div>
+      <button class="icon-btn history-btn"><i class="fa-solid fa-clock-rotate-left"></i></button>
+    </div>
+
+    <!-- Ecrã -->
+    <div class="display">
+      <input type="text" id="screen" value="0" readonly>
+    </div>
+
+    <!-- Linha de memória -->
+    <div class="memory-bar">
+      <button disabled>MC</button>
+      <button disabled>MR</button>
+      <button>M+</button>
+      <button>M-</button>
+      <button>MS</button>
+      <button disabled>M&#8285;</button>
+    </div>
+
+    <!-- Teclado principal -->
+    <div class="keypad">
+      <button class="btn btn-func" onclick="appendOperator('%')">%</button>
+      <button class="btn btn-func" onclick="clearEntry()">CE</button>
+      <button class="btn btn-func" onclick="clearAll()">C</button>
+      <button class="btn btn-func" onclick="backspace()"><i class="fa-solid fa-delete-left"></i></button>
+
+      <button class="btn btn-func" onclick="specialOperation('reciprocal')"><sup>1</sup>/<sub><i>x</i></sub></button>
+      <button class="btn btn-func" onclick="specialOperation('square')"><i>x</i><sup>2</sup></button>
+      <button class="btn btn-func" onclick="specialOperation('sqrt')"><sup>2</sup>&radic;<i>x</i></button>
+      <button class="btn btn-func" onclick="appendOperator('/')">&divide;</button>
+
+      <button class="btn btn-num" onclick="appendNumber('7')">7</button>
+      <button class="btn btn-num" onclick="appendNumber('8')">8</button>
+      <button class="btn btn-num" onclick="appendNumber('9')">9</button>
+      <button class="btn btn-func" onclick="appendOperator('*')">&times;</button>
+
+      <button class="btn btn-num" onclick="appendNumber('4')">4</button>
+      <button class="btn btn-num" onclick="appendNumber('5')">5</button>
+      <button class="btn btn-num" onclick="appendNumber('6')">6</button>
+      <button class="btn btn-func" onclick="appendOperator('-')">&minus;</button>
+
+      <button class="btn btn-num" onclick="appendNumber('1')">1</button>
+      <button class="btn btn-num" onclick="appendNumber('2')">2</button>
+      <button class="btn btn-num" onclick="appendNumber('3')">3</button>
+      <button class="btn btn-func" onclick="appendOperator('+')">+</button>
+
+      <button class="btn btn-num" onclick="toggleSign()">+/&minus;</button>
+      <button class="btn btn-num" onclick="appendNumber('0')">0</button>
+      <button class="btn btn-num" onclick="appendNumber(',')">,</button>
+      <button class="btn btn-equal" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

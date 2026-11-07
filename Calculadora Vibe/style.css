@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e5e5e5;
+}
+
+.calculator-container {
+  width: 320px;
+  background-color: #f3f3f3;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Barra Superior */
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  padding-left: 12px;
+  font-size: 12px;
+  color: #333;
+}
+
+.title-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title-controls {
+  display: flex;
+  height: 100%;
+}
+
+.title-controls button {
+  width: 45px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.title-controls button:hover {
+  background-color: #e5e5e5;
+}
+
+.title-controls button.close-btn:hover {
+  background-color: #e81123;
+  color: white;
+}
+
+/* Cabeçalho */
+.calc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  height: 40px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mode-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #444;
+  font-size: 14px;
+}
+
+.icon-btn:hover {
+  background-color: #e5e5e5;
+}
+
+/* Visor */
+.display {
+  padding: 10px 16px 5px 16px;
+  text-align: right;
+}
+
+.display input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: right;
+  font-size: 46px;
+  font-weight: 600;
+  color: #000;
+  outline: none;
+}
+
+/* Memória */
+.memory-bar {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 0 4px;
+  margin-bottom: 6px;
+}
+
+.memory-bar button {
+  background: transparent;
+  border: none;
+  height: 28px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #262626;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.memory-bar button:disabled {
+  color: #a6a6a6;
+  cursor: default;
+}
+
+.memory-bar button:not(:disabled):hover {
+  background-color: #e5e5e5;
+}
+
+/* Teclado */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  padding: 2px;
+  background-color: #e8e8e8;
+}
+
+.btn {
+  height: 46px;
+  border: none;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.btn-num {
+  background-color: #ffffff;
+  font-weight: 600;
+  color: #000;
+}
+
+.btn-num:hover {
+  background-color: #f9f9f9;
+}
+
+.btn-func {
+  background-color: #f9f9f9;
+  color: #1a1a1a;
+}
+
+.btn-func:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-equal {
+  background-color: #005a9e;
+  color: white;
+  font-size: 18px;
+}
+
+.btn-equal:hover {
+  background-color: #004e8c;
+}
